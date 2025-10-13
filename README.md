@@ -28,3 +28,6 @@ http://localhost:8888/api/products
 ![img.png](img.png)
 http://localhost:8888/api/customers
 ![img_1.png](img_1.png)
+
+l'annuaire Eureka Discrovery Service
+![img_2.png](img_2.png)

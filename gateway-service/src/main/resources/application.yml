@@ -11,13 +11,13 @@ spring:
         routes:
           #Route 1 : redirige les requêtes /api/customers/** vers le microservice client
           - id: customer-service
-            uri: http://localhost:8081
+            uri: lb://CUSTOMER-SERVICE
             predicates:
               path= /api/customers/**
 
           #Route 2 : redirige les requêtes /api/products/** vers le microservice produit
           - id: product-service
-            uri: http://localhost:8082
+            uri: lb://INVENTORY-SERVICE
             predicates:
               path= /api/products/**
 
