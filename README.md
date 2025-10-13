@@ -31,3 +31,21 @@ http://localhost:8888/api/customers
 
 l'annuaire Eureka Discrovery Service
 ![img_2.png](img_2.png)
+une configuration dynamique des routes de la gateway
+ajouter la depandance reactive gateway
+<dependency>
+<groupId>org.springframework.cloud</groupId>
+<artifactId>spring-cloud-starter-gateway</artifactId>
+</dependency>
+ajouter ca dans le fichier main de gateway service
+@Bean
+DiscoveryClientRouteDefinitionLocator discoveryClientRouteDefinitionLocator
+(ReactiveDiscoveryClient reactiveDiscoveryClient, DiscoveryLocatorProperties discoveryLocatorProperties) {
+return new DiscoveryClientRouteDefinitionLocator(reactiveDiscoveryClient, discoveryLocatorProperties);
+}
+http://localhost:8888/INVENTORY-SERVICE/api/products
+![img_3.png](img_3.png)
+http://localhost:8888/CUSTOMER-SERVICE/api/customers
+![img_4.png](img_4.png)
+http://localhost:8888/INVENTORY-SERVICE/api/products/92a4e37e-664e-4d3f-aad9-13a096898871
+![img_5.png](img_5.png)
