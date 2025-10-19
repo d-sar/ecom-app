@@ -1,4 +1,7 @@
 package com.enset.billingservice.repo;
 
-public interface ProductItmRepository {
+import com.enset.billingservice.entities.ProductItem;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface ProductItmRepository extends JpaRepository<ProductItem,Long> {
 }

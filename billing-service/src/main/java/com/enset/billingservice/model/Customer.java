@@ -1,11 +1,13 @@
-package com.enset.billingservice.entities;
+package com.enset.billingservice.model;
 
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
+@Data
 @Getter @Setter
 public class Customer {
     private Long id;
-    private String nom;
+    private String name;
     private String email ;
 }
